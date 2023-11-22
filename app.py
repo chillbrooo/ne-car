@@ -29,6 +29,8 @@ def predict():
               market_category,vehicle_size,vehicle_style,highway_mpg,city_mpg,popularity)
         return jsonify({"status":"data fetched successfully"})
     
+        return render_template('predicted.html',predicted_value=predit[0])
+   
     else:
         return render_template("predict.html")
 
