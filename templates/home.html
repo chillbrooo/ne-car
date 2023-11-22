@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #2C3E50 url('car-background.jpg') center/cover no-repeat; /* Replace 'car-background.jpg' with your image file */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 1.5em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-predict {
+            background-color: #97999B; /* Moon Dust color */
+            animation: fadeInUp 1.5s ease-out 0.5s;
+        }
+
+        .btn:hover {
+            background-color: #5E6063; /* Darker shade for other buttons on hover */
+        }
+    </style>
+    <title>Car Sales Predictor</title>
+</head>
+<body>
+    <h1>Car Sales Predictor</h1>
+    
+    <div class="btn-container">
+        <a href="/toyota" class="btn">Toyota</a>
+        <a href="/bmw" class="btn">BMW</a>
+    </div>
+    
+    <a href="/predict" class="btn btn-predict">Predict Now</a>
+</body>
+</html>
